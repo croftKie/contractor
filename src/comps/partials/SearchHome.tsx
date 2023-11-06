@@ -5,6 +5,16 @@ import { useState, useRef } from "react";
 export default function SearchHome(props: homeProps) {
   const [mode, setMode] = useState("remote");
   const inputRef = useRef<HTMLInputElement>(null);
+  const optionsRef = useRef<HTMLDivElement>(null);
+
+  const changeActive = (e: any) => {
+    const children = optionsRef.current?.children || [];
+    for (let i = 0; i < children.length; i++) {
+      children[i].classList.remove("active");
+    }
+    console.log(e.target);
+    e.target.classList.add("active");
+  };
 
   return (
     <div className="searchHome">
@@ -30,24 +40,28 @@ export default function SearchHome(props: homeProps) {
           <img src={search} alt="" />
         </button>
       </div>
-      <div className="options">
+      <div ref={optionsRef} className="options">
         <button
-          onClick={() => {
+          className="active"
+          onClick={(e) => {
             setMode("remote");
+            changeActive(e);
           }}
         >
           Remote
         </button>
         <button
-          onClick={() => {
+          onClick={(e) => {
             setMode("office");
+            changeActive(e);
           }}
         >
           In-office
         </button>
         <button
-          onClick={() => {
+          onClick={(e) => {
             setMode("hybrid");
+            changeActive(e);
           }}
         >
           Hybrid

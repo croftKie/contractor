@@ -13,11 +13,15 @@ export default function ForYouCard(props: jobCardProps) {
       className="card"
     >
       <div className="logo">
-        <img src={heart} alt="" />
+        {props.employer_logo ? (
+          <img src={props.employer_logo} alt="" />
+        ) : (
+          <img src={heart} alt="" />
+        )}
       </div>
       <div className="text">
-        <p>{props.job_title}</p>
-        <p>{new Date(dateTime * 1000).toLocaleString()}</p>
+        <p className="jobTitle">{props.job_title}</p>
+        <p>{new Date(dateTime * 1000).toDateString()}</p>
       </div>
     </div>
   );

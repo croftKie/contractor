@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -10,11 +12,14 @@ $base-red: rgb(225, 132, 132);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
 }
 
 #root {
-  max-width: 1280px;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -30,10 +35,11 @@ $base-red: rgb(225, 132, 132);
       height: 35px;
       width: 35px;
       border-radius: 5px;
-      background-color: rgb(218, 218, 218);
+      background-color: $base-red;
       @include flex-center();
       img {
         height: 25px;
+        filter: invert(100%);
       }
     }
   }
@@ -84,6 +90,12 @@ $base-red: rgb(225, 132, 132);
         border-radius: 25px;
         height: 30px;
         width: 70px;
+        cursor: pointer;
+      }
+      .active {
+        background-color: $base-red;
+        border: none;
+        color: white;
       }
     }
   }
@@ -100,14 +112,29 @@ $base-red: rgb(225, 132, 132);
       overflow-x: scroll;
       overflow-y: hidden;
       white-space: nowrap;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .card {
         width: 200px;
         height: 150px;
         display: inline-block;
         // width: 10%;
-        background-color: $base-red;
+        background-color: white;
         margin-right: 10px;
         border-radius: 10px;
+        cursor: pointer;
+        color: black;
+        &:hover {
+          background-color: $base-red;
+          color: white;
+        }
+        &:active {
+          background-color: $base-red;
+          color: white;
+        }
         .content {
           display: flex;
           flex-direction: column;
@@ -116,15 +143,14 @@ $base-red: rgb(225, 132, 132);
           justify-content: space-between;
           div {
             img {
-              height: 40px;
-              width: 40px;
-              background-color: wheat;
+              height: 30px;
+              width: 30px;
+              background-color: inherit;
               border-radius: 10px;
             }
-            p {
-              &:nth-of-type(2) {
-                color: white;
-              }
+            .jobTitle {
+              width: 100%;
+              overflow: hidden;
             }
           }
         }
@@ -150,12 +176,30 @@ $base-red: rgb(225, 132, 132);
         padding: 1rem;
         background-color: white;
         border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: $base-red;
+          color: white;
+        }
+        &:active {
+          background-color: $base-red;
+          color: white;
+        }
         .logo {
           height: 40px;
           width: 40px;
           @include flex-center();
           img {
-            height: 30px;
+            width: 30px;
+          }
+        }
+        .text {
+          width: 60%;
+          p {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: end;
           }
         }
       }
@@ -168,11 +212,13 @@ $base-red: rgb(225, 132, 132);
     width: 100%;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
     .back {
-      height: 40px;
-      width: 40px;
+      height: 30px;
+      width: 30px;
+      @include flex-center();
       img {
-        width: 30px;
+        width: 25px;
       }
     }
   }
@@ -198,13 +244,17 @@ $base-red: rgb(225, 132, 132);
     gap: 10px;
     margin-top: 5px;
     button {
-      background-color: $base-red;
       flex: 1;
       color: white;
       border: none;
       outline: none;
       height: 40px;
       border-radius: 10px;
+      color: black;
+    }
+    .active {
+      background-color: $base-red;
+      color: white;
     }
   }
   .aboutJob {
@@ -212,6 +262,7 @@ $base-red: rgb(225, 132, 132);
     flex-direction: column;
     padding: 30px 0 0 0;
     gap: 10px;
+    margin-bottom: 80px;
     h4 {
       color: $base-red;
     }
@@ -254,6 +305,7 @@ $base-red: rgb(225, 132, 132);
     margin-bottom: 20px;
     h4 {
       color: $base-red;
+      font-size: 1.2rem;
     }
     p {
       font-size: 0.75rem;
@@ -278,12 +330,16 @@ $base-red: rgb(225, 132, 132);
       @include flex-center();
       img {
         height: 20px;
+        filter: invert(100%);
+      }
+      .next {
+        transform: rotate(180deg);
       }
     }
     .page {
       height: 30px;
       width: 30px;
-      background-color: lightgray;
+      background-color: rgb(255, 255, 255);
       border-radius: 5px;
       @include flex-center();
       p {
@@ -306,7 +362,16 @@ $base-red: rgb(225, 132, 132);
       .logo {
         @include flex-center();
         img {
-          height: 40px;
+          width: 40px;
+        }
+      }
+      .text {
+        width: 60%;
+        p {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-align: end;
         }
       }
     }

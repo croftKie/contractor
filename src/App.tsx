@@ -4,22 +4,26 @@ import Search from "./comps/Search";
 import "./css/App.css";
 import { useState, useEffect } from "react";
 import { useFetch } from "./utils/useFetch";
-import { data } from "./utils/fakeData";
+// import { data } from "./utils/fakeData";
 
 export default function App() {
   const [page, setPage] = useState<number>(0);
   const [selectedJobId, setSelectedJobId] = useState<number>(0);
   const [search, setSearch] = useState({ mode: "remote", searchValue: "" });
+  const [data, setData] = useState([]);
 
-  // useFetch("javascript");
+  const fetch = async () => {
+    const response = await useFetch("javascript");
 
-  // useEffect(() => {
-  //   data.forEach((item: any) => {
-  //     item["id"] = Math.round(Math.random() * 1000000);
-  //   });
-  // }, []);
+    response.forEach((item: any) => {
+      item["id"] = Math.round(Math.random() * 1000000);
+    });
+    setData(response);
+  };
 
-  console.log(data);
+  useEffect(() => {
+    fetch();
+  }, []);
 
   return page === 0 ? (
     <Home
@@ -36,6 +40,12 @@ export default function App() {
       page={page}
     />
   ) : (
-    <Search data={data} search={search} setPage={setPage} page={page} />
+    <Search
+      setSelectedJobId={setSelectedJobId}
+      data={data}
+      search={search}
+      setPage={setPage}
+      page={page}
+    />
   );
 }

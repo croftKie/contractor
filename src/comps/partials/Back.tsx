@@ -1,7 +1,6 @@
 import back from "../../assets/back.png";
-import { setPageProps } from "../../types";
 
-export default function Back(props: setPageProps) {
+export default function Back(props: { setPage: any }) {
   return (
     <div className="backButton">
       <div

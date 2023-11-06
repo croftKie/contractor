@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { API_KEY } from "../../config.js";
 export async function useFetch(query: string) {
   const options = {
     method: "GET",
@@ -10,14 +10,14 @@ export async function useFetch(query: string) {
       num_pages: "1",
     },
     headers: {
-      "X-RapidAPI-Key": "265d17cc4dmsh63aa91656fc0546p13b5b7jsne954c82ce26a",
+      "X-RapidAPI-Key": API_KEY,
       "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
     },
   };
 
   try {
-    const response = await axios.request(options);
-    console.log(response.data);
+    const { data } = await axios.request(options);
+    return data.data;
   } catch (error) {
     console.error(error);
   }

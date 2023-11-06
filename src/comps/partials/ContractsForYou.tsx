@@ -11,6 +11,7 @@ export default function ContractsForYou(props: contractProps) {
             <ForYouCard
               setSelectedJobId={props.setSelectedJobId}
               employer_name={item.employer_name}
+              employer_logo={item.employer_logo}
               job_title={item.job_title}
               job_posted_at_timestamp={item.job_posted_at_timestamp}
               setPage={props.setPage}

@@ -12,11 +12,15 @@ export default function RecentCard(props: jobCardProps) {
     >
       <div className="content">
         <div>
-          <img src={heart} alt="" />
+          {props.employer_logo ? (
+            <img src={props.employer_logo} alt="" />
+          ) : (
+            <img src={heart} alt="" />
+          )}
           <p>{props.employer_name}</p>
         </div>
         <div>
-          <p>{props.job_title}</p>
+          <p className="jobTitle">{props.job_title}</p>
           <p>{props.job_location}</p>
         </div>
       </div>

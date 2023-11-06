@@ -11,6 +11,7 @@ export default function RecentContracts(props: contractProps) {
             <RecentCard
               setSelectedJobId={props.setSelectedJobId}
               employer_name={item.employer_name}
+              employer_logo={item.employer_logo}
               job_title={item.job_title}
               job_location={item.job_country}
               setPage={props.setPage}
