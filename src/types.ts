@@ -22,6 +22,7 @@ export type jobCardProps = {
   employer_name: string;
   job_title: string;
   job_location?: string;
+  job_city?: string;
   job_posted_at_timestamp?: number;
   employer_logo: string;
   id: number;
@@ -34,6 +35,7 @@ export type searchProps = {
   search: { mode: string; searchValue: string };
   page?: number;
   data?: any[];
+  setData?: any;
   setSelectedJobId: any;
 };
 

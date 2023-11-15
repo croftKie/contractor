@@ -1,13 +1,15 @@
 import { singleJobAbout } from "../../types";
 
 export default function JobAbout(props: singleJobAbout) {
+  const arr: string[] = props.job_text || [];
+
   return (
     <div className="aboutJob">
       <h4>About the Job</h4>
-      {props.job_text.map((item) => {
+      {arr.map((item) => {
         return (
           <>
-            <p>{item}</p>
+            <p dangerouslySetInnerHTML={{ __html: item }}></p>
             <br />
           </>
         );

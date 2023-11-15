@@ -7,9 +7,8 @@ import { jobProps } from "../types";
 import { useState } from "react";
 
 export default function Job(props: jobProps) {
-  const [jobText, setJobText] = useState<string[]>(
-    props.job.job_highlights.Responsibilities
-  );
+  const [jobText, setJobText] = useState<string[]>([props.job.job_description]);
+
   return (
     <>
       <Back setPage={props.setPage} />

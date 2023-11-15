@@ -13,7 +13,7 @@ export default function App() {
   const [data, setData] = useState([]);
 
   const fetch = async () => {
-    const response = await useFetch("javascript");
+    const response = await useFetch("javascript", 1);
 
     response.forEach((item: any) => {
       item["id"] = Math.round(Math.random() * 1000000);
@@ -24,7 +24,6 @@ export default function App() {
   useEffect(() => {
     fetch();
   }, []);
-
   return page === 0 ? (
     <Home
       setSelectedJobId={setSelectedJobId}
@@ -45,6 +44,7 @@ export default function App() {
       data={data}
       search={search}
       setPage={setPage}
+      setData={setData}
       page={page}
     />
   );

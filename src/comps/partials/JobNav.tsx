@@ -17,11 +17,11 @@ export default function JobNav(props: singleJobNavType) {
       <button
         className="active"
         onClick={(e) => {
-          props.setJobText(props.job.job_highlights.Responsibilities);
+          props.setJobText(props.job.job_description);
           changeActive(e);
         }}
       >
-        Responsibilities
+        Description
       </button>
       <button
         onClick={(e) => {

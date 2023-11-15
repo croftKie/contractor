@@ -19,6 +19,14 @@ body {
   background-color: rgb(243, 243, 243);
 }
 
+button {
+  cursor: pointer;
+  &:hover {
+    transform: scale(105%);
+    transform: scale(95%);
+  }
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -148,7 +156,7 @@ body {
               background-color: inherit;
               border-radius: 10px;
             }
-            .jobTitle {
+            p {
               width: 100%;
               overflow: hidden;
             }
@@ -288,7 +296,7 @@ body {
         width: 35px;
       }
     }
-    button {
+    a {
       flex: 1;
       border-radius: 10px;
       background-color: $base-red;
@@ -296,6 +304,9 @@ body {
       border: none;
       outline: none;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
   //
@@ -315,7 +326,7 @@ body {
   .searchControls {
     top: 90vh;
     height: 10vh;
-    width: 95%;
+    width: 100%;
     position: fixed;
     @include flex-center();
     background-color: rgb(243, 243, 243);
@@ -372,6 +383,82 @@ body {
           overflow: hidden;
           white-space: nowrap;
           text-align: end;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #root {
+    align-items: center;
+    padding-bottom: 10%;
+    .searchHome {
+      width: 50%;
+    }
+    .recentContracts {
+      width: 85%;
+      align-items: center;
+      h4 {
+        font-size: 2rem;
+        width: 100%;
+      }
+      .contractContainer {
+        width: 90%;
+      }
+    }
+    .contractsForYou {
+      width: 85%;
+      align-items: center;
+      h4 {
+        font-size: 2rem;
+        width: 100%;
+      }
+      .contractContainer {
+        width: 80%;
+      }
+    }
+    .infoSection {
+      img {
+        height: 90px;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    .aboutJob {
+      align-items: center;
+      width: 60%;
+      h4 {
+        width: 100%;
+        font-size: 2rem;
+      }
+      p {
+        width: 90%;
+        line-height: 30px;
+      }
+    }
+    .controls {
+      width: 40%;
+    }
+    .jobNav {
+      width: 50%;
+    }
+    .searchInfo {
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+    .searchContent {
+      .card {
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(225, 132, 132);
+          color: white;
+          transform: scale(105%);
         }
       }
     }

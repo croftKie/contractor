@@ -3,31 +3,29 @@ import ForYouCard from "./partials/ForYouCard";
 import SearchInfo from "./partials/SearchInfo";
 import SearchControls from "./partials/searchControls";
 import { searchProps } from "../types";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useFetch } from "../utils/useFetch";
 
 export default function Search(props: searchProps) {
-  const [data, setData] = useState<any>([]);
-
-  const fetch = async (query: string) => {
-    const response = await useFetch(query);
+  const fetch = async (query: string, page: number) => {
+    const response = await useFetch(query, page);
 
     response.forEach((item: any) => {
       item["id"] = Math.round(Math.random() * 1000000);
     });
-    setData(response);
+    props.setData(response);
   };
 
   useEffect(() => {
-    fetch(props.search.searchValue);
+    fetch(props.search.searchValue, 1);
   }, []);
 
   return (
     <>
       <Back setPage={props.setPage} />
-      <SearchInfo />
+      <SearchInfo query={props.search.searchValue} />
       <div className="searchContent">
-        {data?.map((item: any) => {
+        {props.data?.map((item: any) => {
           return (
             <ForYouCard
               employer_logo={item.employer_logo}
@@ -41,7 +39,7 @@ export default function Search(props: searchProps) {
           );
         })}
       </div>
-      <SearchControls />
+      <SearchControls fetch={fetch} query={props.search.searchValue} />
     </>
   );
 }

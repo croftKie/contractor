@@ -21,7 +21,9 @@ export default function RecentCard(props: jobCardProps) {
         </div>
         <div>
           <p className="jobTitle">{props.job_title}</p>
-          <p>{props.job_location}</p>
+          <p>
+            {props.job_city} - {props.job_location}
+          </p>
         </div>
       </div>
     </div>

@@ -14,6 +14,7 @@ export default function RecentContracts(props: contractProps) {
               employer_logo={item.employer_logo}
               job_title={item.job_title}
               job_location={item.job_country}
+              job_city={item.job_city}
               setPage={props.setPage}
               id={item.id}
             />

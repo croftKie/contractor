@@ -8,7 +8,7 @@ export default function JobControls(props: singleJobType) {
         <img src={heart} alt="" />
       </div>
       <a target="_blank" href={props.job.apply_options[0].apply_link}>
-        Apply For Contract
+        <p>Apply For Contract</p>
       </a>
     </div>
   );

@@ -1,7 +1,7 @@
-export default function SearchInfo() {
+export default function SearchInfo({ query }: { query: string }) {
   return (
     <div className="searchInfo">
-      <h4>JavaScript Contracts</h4>
+      <h4>{query} Contracts</h4>
       <p>Recent Opportunities</p>
     </div>
   );
