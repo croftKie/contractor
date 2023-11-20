@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_KEY } from "../../config.js";
+
 export async function useFetch(query: string, page: number) {
   const options = {
     method: "GET",
