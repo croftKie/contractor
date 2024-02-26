@@ -33,7 +33,7 @@ button:hover {
   height: 35px;
   width: 35px;
   border-radius: 5px;
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@ button:hover {
   flex-direction: column;
 }
 #root .searchHome .introText h4 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
   font-size: 1.4rem;
 }
 #root .searchHome .searchBar {
@@ -70,7 +70,7 @@ button:hover {
 }
 #root .searchHome .searchBar button {
   flex: 1;
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   border-radius: 10px;
   border: none;
   outline: none;
@@ -96,7 +96,7 @@ button:hover {
   cursor: pointer;
 }
 #root .searchHome .options .active {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   border: none;
   color: white;
 }
@@ -107,7 +107,7 @@ button:hover {
   gap: 10px;
 }
 #root .recentContracts h4 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
 }
 #root .recentContracts .contractContainer {
   position: relative;
@@ -131,11 +131,11 @@ button:hover {
   color: black;
 }
 #root .recentContracts .contractContainer .card:hover {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 #root .recentContracts .contractContainer .card:active {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 #root .recentContracts .contractContainer .card .content {
@@ -161,7 +161,7 @@ button:hover {
   margin-top: 5%;
 }
 #root .contractsForYou h4 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
   margin-bottom: 5%;
 }
 #root .contractsForYou .contractContainer {
@@ -179,11 +179,11 @@ button:hover {
   cursor: pointer;
 }
 #root .contractsForYou .contractContainer .card:hover {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 #root .contractsForYou .contractContainer .card:active {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 #root .contractsForYou .contractContainer .card .logo {
@@ -233,7 +233,7 @@ button:hover {
   height: 40px;
 }
 #root .infoSection h3 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
 }
 #root .infoSection p {
   font-size: 0.75rem;
@@ -255,7 +255,7 @@ button:hover {
   color: black;
 }
 #root .jobNav .active {
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   color: white;
 }
 #root .aboutJob {
@@ -266,7 +266,7 @@ button:hover {
   margin-bottom: 80px;
 }
 #root .aboutJob h4 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
 }
 #root .controls {
   top: 90vh;
@@ -282,7 +282,7 @@ button:hover {
 #root .controls .favourite {
   height: 50px;
   width: 50px;
-  border: 2px solid rgb(225, 132, 132);
+  border: 2px solid rgb(255, 0, 0);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -295,7 +295,7 @@ button:hover {
 #root .controls a {
   flex: 1;
   border-radius: 10px;
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   height: 50px;
   border: none;
   outline: none;
@@ -308,12 +308,12 @@ button:hover {
   margin-bottom: 20px;
 }
 #root .searchInfo h4 {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
   font-size: 1.2rem;
 }
 #root .searchInfo p {
   font-size: 0.75rem;
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
 }
 #root .searchControls {
   top: 90vh;
@@ -329,7 +329,7 @@ button:hover {
 #root .searchControls button {
   height: 30px;
   width: 30px;
-  background-color: rgb(225, 132, 132);
+  background-color: rgb(255, 0, 0);
   border-radius: 5px;
   border: none;
   outline: none;
@@ -354,7 +354,7 @@ button:hover {
   justify-content: center;
 }
 #root .searchControls .page p {
-  color: rgb(225, 132, 132);
+  color: rgb(255, 0, 0);
 }
 #root .searchContent {
   display: flex;
